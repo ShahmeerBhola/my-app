@@ -1,9 +1,13 @@
+import { useMediaQuery } from "@mui/material";
+import { match } from "assert";
 import React from "react";
 import styled from "styled-components";
 import Offer from "../../components/Offer";
+import Offers from "../../components/Offers";
 
 
 function Office() {
+  const matches=useMediaQuery('(max-width:786px)'); 
     return (
         <Wrapper>
       <Content>
@@ -39,7 +43,9 @@ function Office() {
               <p>Closed</p>
           </Timing>
         </Column1>
-        <Offer/>
+        {
+          matches?<Offers/>:<Offer/>
+        }
         
       </Content>
     </Wrapper>
@@ -53,6 +59,9 @@ overflow:hidden;
   height: 100vh;
   width: 100%;
   background: radial-gradient(215.68% 113.67% at -16.67% -8.36%, #FFFFFF 0%, #F5E0D8 35.97%, #F4DFD7 72.19%, #DFC2BB 98.65%) ;
+  @media (max-width: 786px){
+    height:100%;  
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -64,6 +73,18 @@ const Content = styled.div`
   @media (max-width: 1070px){
     width:85%;
   }
+  @media (max-width: 786px){
+    width:90%;
+    gap:10px;
+  }
+  @media (max-width: 580px){
+    padding:80px 0px;
+    width:95%;
+    flex-direction:column;
+    align-items:center;
+    gap:50px;
+  }
+
 `;
 const Column1 = styled.div`
   display: flex;
@@ -100,6 +121,31 @@ const Column1 = styled.div`
     p {
       font-size: 14px;
       line-height: 20px;
+    }
+
+  }
+  @media (max-width: 786px){
+    width: 250px;
+    h2 {
+      font-size: 34px;
+      line-height: 28px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+  }
+  @media (max-width: 786px){
+    width: fit-content;
+    text-align:center;
+    h2 {
+      font-size: 34px;
+      line-height: 28px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
     }
 
   }
