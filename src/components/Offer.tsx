@@ -25,8 +25,8 @@ const Column2 = styled.div`
   align-items: center;
   padding: 16px;
   gap: 16px;
-  width: 448px;
-  height: 539px;
+  width: 400px;
+  height: auto;
   background: #ffffff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
   border-radius: 16px;
@@ -42,6 +42,11 @@ const Column2 = styled.div`
     text-transform: uppercase;
     color: #c08676;
   }
+  @media (max-width: 1070px) {
+    width:330px;
+  }
+ 
+
 `;
 const Bottom = styled.div`
   display: flex;

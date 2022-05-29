@@ -83,7 +83,10 @@ function Result() {
               </p>
             </Card>
           </Cards>
-          <span>1. BOTOX<sup>®</sup> Cosmetic (onabotulinumtoxinA) Prescribing Information, 2020.</span>
+          <span>
+            1. BOTOX<sup>®</sup> Cosmetic (onabotulinumtoxinA) Prescribing
+            Information, 2020.
+          </span>
         </Column2>
       </Content>
     </Wrapper>
@@ -108,6 +111,10 @@ padding: 140px 0px;
 gap: 100px;
 width:75%;
 margin 0 auto;
+@media (max-width: 1070px){
+  width:85%;
+  gap:50px;
+}
 `;
 const Column1 = styled.div`
   width: 100%;
@@ -116,13 +123,13 @@ const Column1 = styled.div`
   justify-content: space-between;
   color: #ffffff;
   height: 100%;
-  padding-bottom:40px;
+  padding-bottom: 40px;
 `;
 const Results = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-self:center;
+  align-self: center;
   gap: 20px;
   h2 {
     width: 100%;
@@ -159,11 +166,28 @@ const Results = styled.div`
     font-family: "Roboto";
     color: rgba(255, 255, 255, 0.7);
   }
+  @media (max-width: 1070px) {
+    width: 40%;
+    gap: 20px;
+    h2 {
+      font-size: 42px;
+      span {
+        font-size: 42px;
+      }
+    }
+    p {
+      width: fit-content !important;
+    }
+  }
 `;
 const Multiple = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  @media (max-width: 1070px){
+    gap:10px; 
+  }
+
 `;
 const Circle = styled.div`
   box-sizing: border-box;
@@ -173,6 +197,10 @@ const Circle = styled.div`
   border: 1.33333px solid rgba(255, 255, 255, 0.25);
   &:nth-child(1) {
     border: 1.33333px solid #c08676;
+  }
+  @media (max-width: 1070px){
+    width:70px;
+    height:70px;
   }
 `;
 const Img = styled.div`
@@ -209,6 +237,15 @@ const Msg = styled.div`
     span {
       font-style: italic;
     }
+  }
+  @media (max-width: 1070px){
+  gap: 20px;
+  p {
+    width: 40%;
+  }
+  p {
+    width: 40%;
+  }
   }
 `;
 const Photo = styled.div`
@@ -262,6 +299,7 @@ const Photo = styled.div`
       line-height: 14px;
       color: #020202;
     }
+    
   }
 `;
 const Button = styled.div`
@@ -296,22 +334,23 @@ const Column2 = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
   justify-content: space-between;
   color: #ffffff;
   height: 100%;
-  span{
+  span {
     font-weight: 400;
     font-size: 10px;
     line-height: 16px;
     color: rgba(255, 255, 255, 0.7);
   }
+
 `;
 const Cards = styled.div`
   display: flex;
   justify-content: row;
   gap: 10px;
-  justify-content:space-between;
+  justify-content: space-between;
 `;
 const Card = styled.div`
   display: flex;
@@ -339,6 +378,24 @@ const Card = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFF;
+    color: #fff;
   }
+  @media (max-width: 1070px){
+    padding: 20px 10px 10px;
+    gap: 10px;
+    width: 369px;
+    background: linear-gradient(0deg, #252525, #252525), #d09284;
+    border-radius: 16px;
+    img {
+      width: 32px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    
+  } 
 `;
